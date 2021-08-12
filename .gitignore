@@ -1,4 +1,5 @@
 EtlWorkers.egg-info
 venv
 .idea
-*__pycache__
+*.pyc
+__pycache__/
