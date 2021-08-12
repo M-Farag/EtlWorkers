@@ -27,3 +27,23 @@ def end_lines_with_comma(file_path:str):
 		with open(new_file_name,'w') as dest_file:
 			for line in src_file:
 				dest_file.write(str(line.strip('\n')+','+'\n'))
+
+
+def replace_a_word_in_each_line(file_path:str,old_word:str,new_word:str):
+	""" Read a file as lines, Search and replace a specific word in the whole file, save as new file.
+	
+	Args:
+		file_path (str): The source file destination and name
+		old_word (str): The word you want to look up and replace
+		new_word (str): the word that will replace the old word
+	
+	Returns:
+		new .txt file with a uuid4 name
+	"""
+
+	new_file_name  = str(uuid.uuid4()) + '.txt'
+	with open(file_path) as src_file:
+		with open(new_file_name,'w') as dest_file:
+			for line in src_file:
+				dest_file.write(str(line.replace(old_word,new_word)))
+
