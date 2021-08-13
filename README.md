@@ -21,6 +21,7 @@ pip install EtlWorkers
 
 # In your python application
 import EtlWorkers as ew
-help(ew.end_lines_with_comma)
+my_file = ew.workers.FileWorker('file_location_and_name.csv')
+my_file.replace_a_word_in_each_line('old_word','new_word')
 ```
 
