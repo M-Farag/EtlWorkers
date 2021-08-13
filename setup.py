@@ -11,7 +11,7 @@ setup(
     long_description_content_type="text/markdown",
     name="EtlWorkers",
     url="https://github.com/M-Farag/EtlWorkers",
-    version="0.0.5",
+    version="0.0.6",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
