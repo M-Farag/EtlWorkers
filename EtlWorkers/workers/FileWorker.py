@@ -8,6 +8,8 @@ class FileWorker:
         self._file_name = file_name
         self._file_location = None
 
+        self._default_output_extension = '.txt'
+
     @property
     def file_name(self):
         return self._file_name
@@ -33,7 +35,7 @@ class FileWorker:
         Returns:
             new .txt file with a uuid4 name
         """
-        new_file_name = str(uuid.uuid4()) + '.txt'
+        new_file_name = str(uuid.uuid4()) + self._default_output_extension
         with open(self.file_name) as src_file:
             with open(new_file_name, 'w') as dest_file:
                 for line in src_file:
@@ -47,8 +49,7 @@ class FileWorker:
         Returns:
             new .txt file with a uuid4 name
         """
-
-        new_file_name = str(uuid.uuid4()) + '.txt'
+        new_file_name = str(uuid.uuid4()) + self._default_output_extension
         with open(self.file_location) as src_file:
             with open(new_file_name, 'w') as dest_file:
                 for line in src_file:
